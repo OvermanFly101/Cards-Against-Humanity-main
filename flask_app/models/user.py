@@ -1,8 +1,7 @@
 from flask_app.config.mysqlconnection import connectToMySQL
 from flask import flash
-from flask_bcrypt import Bcrypt
-# bcrypt = Bcrypt(app)
 
+# Declares the database name.
 DATABASE = "user_schema_cah"
 
 # Users table with all of its attributes.
@@ -13,6 +12,10 @@ class User:
         self.hash_pw = data['hash_pw']
         self.created_at = data['created_at']
         self.updated_at = data['updated_at']
+
+    @property
+    def fullname(self):
+        return f"{self.character_name}"
 
     # Creates a user, and inserts their data in the users table.
     @classmethod
@@ -61,9 +64,9 @@ class User:
         if len(result) >= 1:
             flash('Username is already taken.', 'register')
             is_valid = False
-        if len(user['password']) < 3:
+        if len(user['hash_pw']) < 3:
             flash('Password must be at least 3 characters.', 'register')
             is_valid = False
-        if user['password'] != user['confirm']:
+        if user['hash_pw'] != user['confirm']:
             flash('Passwords do not match.', 'register')
-        return is_valid
+        return is_valid 

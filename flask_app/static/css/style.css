@@ -1,8 +1,10 @@
 /*Cards @dashboard.html*/
+
 .flex{
   display: flex;
   justify-content: center;
 }
+
 .dash {
   font-family: 'Basic', sans-serif;
 	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
@@ -37,7 +39,8 @@
   width: 200px;
 }
 
-.black { /*Black cards*/
+/*Black card*/
+.black { 
   background-color: black;
   border: 2px solid black;
   border-radius: 20px;
@@ -46,7 +49,8 @@
   margin: 10px;
 }
 
-.white { /*White cards*/
+/*White card*/
+.white { 
   background-color: white;
   border: 2px solid black;
   border-radius: 20px;
@@ -54,7 +58,7 @@
   margin: 10px;
 }
 
-/* card pop-up */
+/* Card pop-up */
 #pop {
   display: none;
   position: absolute;
@@ -66,16 +70,40 @@
   transform: translate(-50%, -50%);
 }
 
-#master {
+.display_it {
   background-color: #0c0c0c;
-  color: white; 
+  color: white;
   width: 80%;
+  height: 70vh;
+}
+
+#display_card {
+  width: 150px;
+  padding-left: 5px;
+  padding-top: 5px;
+  margin-left: 10px;
+  border: 2px solid #f3f5f5;
+  background-color: #f6f8f8;
+  border-radius: 20px;
+  color: rgb(3, 3, 3);
+  transition: .3s;
+  text-align: left;
+  height: 200px;
+}
+
+#cardbox {
+  display: flex;
+  justify-content: center;
+}
+
+#master {
+  margin: 0px;
 }
 
 /* the hand */
 .hand {
   position: absolute;
-  margin-left: 50%;
+  margin: 0% 5% 0% 20%;
   bottom: 2px;
   height: 300px;
 }
@@ -92,13 +120,14 @@
 }
 
 .hand_card:hover {
-  box-shadow: 8px 8px #960b96;
+  box-shadow: 8px -8px #960b96;
   transition: .3s;
 }
 
 .hand_card h3{
   margin-bottom: 35px;
 }
+
 /* rainbow button */
 .rainbow{
   background-color: #0c0c0c;
@@ -119,6 +148,7 @@
   border-radius: 20px;
   margin: 10px;
 }
+
 .rainbow_white{
   background-color: #f2f4f7;
   border-radius: 4px;  
@@ -132,35 +162,34 @@
 
 .rainbow-5:hover{
   background-image:     linear-gradient(
-     to right, 
-     #E7484F,
-     #E7484F 16.65%,
-     #F68B1D 16.65%,
-     #F68B1D 33.3%,
-     #FCED00 33.3%,
-     #FCED00 49.95%,
-     #009E4F 49.95%,
-     #009E4F 66.6%,
-     #00AAC3 66.6%,
-     #00AAC3 83.25%,
-     #732982 83.25%,
-     #732982 100%,
-     #E7484F 100%
+    to right, 
+    #E7484F,
+    #E7484F 16.65%,
+    #F68B1D 16.65%,
+    #F68B1D 33.3%,
+    #FCED00 33.3%,
+    #FCED00 49.95%,
+    #009E4F 49.95%,
+    #009E4F 66.6%,
+    #00AAC3 66.6%,
+    #00AAC3 83.25%,
+    #732982 83.25%,
+    #732982 100%,
+    #E7484F 100%
     
     
     
-   );
- animation:slidebg 2s linear infinite;
+  );
+  animation:slidebg 2s linear infinite;
 }
-
 
 @keyframes slidebg {
   to {
     background-position:40vw;
   }
 }
-
-
+ 
+/* Black button */
 .button-b {
   border: 2px solid #0d0e0e;
   background-color: #0d0e0e;
@@ -171,12 +200,13 @@
   height: 250px;
   margin: 10px;
 }
+
 .button-b:hover {
   box-shadow: -8px 8px #ffffff;
   transition: .3s;
 }
 
-
+/* White button */
 .button-w {
   border: 2px solid #f3f5f5;
   background-color: #f6f8f8;
@@ -187,7 +217,11 @@
   height: 250px;
   margin: 10px;
 }
+
 .button-w:hover {
   box-shadow: -8px 8px #181718;
   transition: .3s;
 }
+
+/* Fix absolute position on white cards.
+Anchor to bottom of browser. */
