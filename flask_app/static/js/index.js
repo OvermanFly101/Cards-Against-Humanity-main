@@ -17,7 +17,7 @@ function white_random() {
 
     if(the_hand.length < 7){
         var hand = document.getElementById('hand')
-        the_hand.push(hand.innerHTML += `<td id="hand_card" class="hand_card">${WhiteCards}</td>`); 
+        the_hand.push(hand.innerHTML += `<td id="hand_card" class="hand_card"><h3>${WhiteCards}<h3></td>`); 
         the_text.push(`${WhiteCards}`);
     }
 }
