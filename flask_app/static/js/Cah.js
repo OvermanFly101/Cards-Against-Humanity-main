@@ -1,7 +1,7 @@
 export const Cah = 
 [
   {
-    "name": "Food Pack",
+    "name": "Main",
     "white": [
       {
         "text": "A belly full of hard-boiled eggs.",
@@ -98,45 +98,7 @@ export const Cah =
       {
         "text": "What to do with all of this chocolate on my penis.",
         "pack": 0
-      }
-    ],
-    "black": [
-      {
-        "text": "Aw babe, your burbs smell like _.",
-        "pick": 1,
-        "pack": 0
       },
-      {
-        "text": "Don`t fear failure fear _",
-        "pick": 1,
-        "pack": 0
-      },
-      {
-        "text": "Excuse me, waiter. Could you take this back? This soup tastes like _.",
-        "pick": 1,
-        "pack": 0
-      },
-      {
-        "text": "I'm Bobby Flay, and if you can't stand _. get out of the kitchen!",
-        "pick": 1,
-        "pack": 0
-      },
-      {
-        "text": "It's not delivery. It's _.",
-        "pick": 1,
-        "pack": 0
-      },
-      {
-        "text": "Now on Netflix: Jiro Dreams Of _.",
-        "pick": 1,
-        "pack": 0
-      }
-    ],
-    "official": true
-  },
-  {
-    "name": "Geek Pack",
-    "white": [
       {
         "text": "A fully-dressed female videogame character.",
         "pack": 1
@@ -232,45 +194,7 @@ export const Cah =
       {
         "text": "Yoshi's huge egg-laying cloaca.",
         "pack": 1
-      }
-    ],
-    "black": [
-      {
-        "text": "_ is way better in _ mode.",
-        "pick": 2,
-        "pack": 1
       },
-      {
-        "text": "_: Achievement unlocked.",
-        "pick": 1,
-        "pack": 1
-      },
-      {
-        "text": "(Heavy breathing) Luke, I am _.",
-        "pick": 1,
-        "pack": 1
-      },
-      {
-        "text": "Press ↓ ↓ ← → B to unleash _.",
-        "pick": 1,
-        "pack": 1
-      },
-      {
-        "text": "What made Spock cry?",
-        "pick": 1,
-        "pack": 1
-      },
-      {
-        "text": "What's the latest bullshit that's troubling this quaint fantasy town?",
-        "pick": 1,
-        "pack": 1
-      }
-    ],
-    "official": true
-  },
-  {
-    "name": "Sci-Fi Pack",
-    "white": [
       {
         "text": "[A picture of Sean Connery in the movie Zardoz]",
         "pack": 2
@@ -365,6 +289,66 @@ export const Cah =
       }
     ],
     "black": [
+      {
+        "text": "Aw babe, your burbs smell like _.",
+        "pick": 1,
+        "pack": 0
+      },
+      {
+        "text": "Don`t fear failure fear _",
+        "pick": 1,
+        "pack": 0
+      },
+      {
+        "text": "Excuse me, waiter. Could you take this back? This soup tastes like _.",
+        "pick": 1,
+        "pack": 0
+      },
+      {
+        "text": "I'm Bobby Flay, and if you can't stand _. get out of the kitchen!",
+        "pick": 1,
+        "pack": 0
+      },
+      {
+        "text": "It's not delivery. It's _.",
+        "pick": 1,
+        "pack": 0
+      },
+      {
+        "text": "Now on Netflix: Jiro Dreams Of _.",
+        "pick": 1,
+        "pack": 0
+      },
+      {
+        "text": "_ is way better in _ mode.",
+        "pick": 2,
+        "pack": 1
+      },
+      {
+        "text": "_: Achievement unlocked.",
+        "pick": 1,
+        "pack": 1
+      },
+      {
+        "text": "(Heavy breathing) Luke, I am _.",
+        "pick": 1,
+        "pack": 1
+      },
+      {
+        "text": "Press ↓ ↓ ← → B to unleash _.",
+        "pick": 1,
+        "pack": 1
+      },
+      {
+        "text": "What made Spock cry?",
+        "pick": 1,
+        "pack": 1
+      },
+      {
+        "text": "What's the latest bullshit that's troubling this quaint fantasy town?",
+        "pick": 1,
+        "pack": 1
+      },
       {
         "text": "Computer! Display _ on screen. Enhance.",
         "pick": 1,

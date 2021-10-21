@@ -6,6 +6,7 @@
 .dash {
   font-family: 'Basic', sans-serif;
   background-color: rgb(220, 218, 218);
+  padding: 0px;
 }
 .dash h1 {
   text-align: center;
@@ -54,6 +55,25 @@
   width: 80%;
 }
 
+/* the hand */
+.hand {
+  position: absolute;
+  margin-left: 50%;
+  bottom: 2px;
+  height: 300px;
+}
+
+.hand_card {
+  width: 200px;
+  margin-left: 10px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.hand_card:hover {
+  border: 1px solid;
+  box-shadow: 5px 10px 8px #888888;
+}
 /* rainbow button */
 .rainbow{
   background-color: #0c0c0c;
