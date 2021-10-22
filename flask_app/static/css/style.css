@@ -3,6 +3,7 @@
 * {
   font-family: 'Basic', sans-serif;
 }
+
 .flex{
   display: flex;
   justify-content: center;
@@ -129,16 +130,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 iframe {
   border-radius: 250px;
   margin-top: 50px;
 }
-
-/* .notify h2{
-} */
 
 /* The hand */
 .hand {
@@ -225,7 +222,7 @@ iframe {
     background-position:40vw;
   }
 }
- 
+
 /* Black button */
 .button-b {
   border: 2px solid #0d0e0e;

@@ -10,6 +10,22 @@ bcrypt = Bcrypt(app)
 def main_page():
     return render_template('register_and_login.html')
 
+# Renders the dashboard page.
+@app.route('/dashboard')
+def dashboard_page():
+    if 'user_id' not in session:
+        return redirect('/logout')
+    data = {
+        'id': session['user_id']
+    }
+    return render_template('dashboard.html', user = User.read_by_id(data))
+
+# Logs out the user, and redirects them to the registration/login page.
+@app.route('/logout')
+def logout():
+    session.clear()
+    return redirect('/')
+
 # Adds a user's data to the users table in the database, and redirects them to the dashboard page.
 @app.route('/register', methods = ['post'])
 def register():
@@ -35,19 +51,3 @@ def login():
         return redirect('/')
     session['user_id'] = user.id
     return redirect('/dashboard')
-
-# Renders the dashboard page.
-@app.route('/dashboard')
-def dashboard_page():
-    if 'user_id' not in session:
-        return redirect('/logout')
-    data = {
-        'id': session['user_id']
-    }
-    return render_template('dashboard.html', user = User.read_by_id(data))
-
-# Logs out the user, and redirects them to the registration/login page.
-@app.route('/logout')
-def logout():
-    session.clear()
-    return redirect('/')

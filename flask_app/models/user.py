@@ -13,10 +13,6 @@ class User:
         self.created_at = data['created_at']
         self.updated_at = data['updated_at']
 
-    @property
-    def fullname(self):
-        return f"{self.character_name}"
-
     # Creates a user, and inserts their data in the users table.
     @classmethod
     def create(cls, data):

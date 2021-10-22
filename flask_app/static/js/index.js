@@ -48,7 +48,6 @@ function white_random() {
     }
 }
 
-
 console.log(the_hand);
 
 // Removes a card and adds its text to the black box on click.
@@ -102,18 +101,31 @@ var count = 0;
 var restart_button = document.getElementById('next_game');
 restart_button.addEventListener('click', restart);
 function restart(){
-    // this doesn't disappear
-    document.getElementById('pop-it').notify.style.display = 'none';
+    if(count === 5){
+        var alert_user = document.getElementById('pop-it');
+        alert_user.innerHTML= '<div class="notify"><h2>Would You like to continue?</h2></div>';
+        count = 0;
+    }
+    
+    var alert_user = document.getElementById('pop-it');
+    if(chosen == the_user[0]){
+        alert_user.innerHTML= `<div class="notify" style='display: none;'><iframe src="https://giphy.com/embed/7b4FwtEI6W9yg" width="480" height="366" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><h2>I guess you won this round.</h2></div>`;
+    } else{
+        alert_user.innerHTML= `<div class="notify" style='display: none;'><h2 style='width:400px;'>Wow you think the computer is funnier? I respect the honesty. You deserve an Oscar.</h2><iframe src="https://giphy.com/embed/jU9m03NG7bw88rwzok" width="480" height="400" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>`;
+    }
 
     //PROBLEM CHILD: deletes whole <tr>
     var display_row = document.getElementById('display_row'); // Problem child!
-    display_row.remove();
+    while(display_row.firstChild){
+        display_row.removeChild(display_row.firstChild);
+    }
 
     var master = document.getElementById('master');
     var BlackCards = black_cards[Math.floor(Math.random()*black_cards.length)];
     master.innerHTML = `<h1>${BlackCards.text}</h1>`;
     console.log(`${BlackCards.text}`);
     count++;
+    console.log('the count: ' + count);
 }
 
 // var chosen_two = document.getElementById('display_row');
@@ -121,18 +133,12 @@ function restart(){
 // function reset() {
 //     document.getElementById("display_row").reset();
 
-
-
 // function computer_card() {
 //     var random_w_card = white_cards[Math.floor(Math.random()*white_cards.length)];
 //     var WhiteCards = random_w_card.text;
 //     console.log(WhiteCards);
 //     display.innerHTML += `<td id="hand_card ${num}" class="hand_card"><h3>${WhiteCards}<h3></td>`;
 // }
-
-
-
-
 
 // for(const card of foodWhiteCards) {
 //     cards.innerHTML = card `<li>${card.text}</li>`
@@ -142,5 +148,3 @@ function restart(){
 // var pop = document.getElementById("pop")
 // // var randomBlack_card = black_cards[Math.floor(Math.random()*black_cards.length)];
 // pop.innerHTML = `<h2>${}`
-
-//slice method to remove white cards.

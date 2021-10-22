@@ -32,7 +32,7 @@ def winner():
 def create_card():
     if 'user_id' not in session:
         return redirect('/logout') 
-    if not Card.validate_card(request.form): # ADD INFO
+    if not Card.validate_card(request.form):
         return redirect('/winner')
     data = {
         'card_name': request.form['card_name'],
@@ -41,4 +41,3 @@ def create_card():
     }
     Card.create_card(data)
     return redirect('/winner/cards')  
-
