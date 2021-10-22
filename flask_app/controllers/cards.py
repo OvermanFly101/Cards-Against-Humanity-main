@@ -5,7 +5,7 @@ from flask_app.models.user import User
 from flask_bcrypt import Bcrypt
 bcrypt = Bcrypt(app)
 
-# Renders the ADD INFO page.
+# Renders the card winners page.
 @app.route('/winner/cards')
 def winner_cards():
     if 'user_id' not in session:
@@ -41,3 +41,4 @@ def create_card():
     }
     Card.create_card(data)
     return redirect('/winner/cards')  
+

@@ -54,7 +54,7 @@ class Card:
             return False
         return cls(result[0])
 
-    # Validates a card that the user can create.
+    # Generates a flash message on the card winner page if certain requirements aren't met.
     @staticmethod
     def validate_card(card):
         is_valid = True

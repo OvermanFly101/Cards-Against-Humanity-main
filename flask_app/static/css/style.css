@@ -1,5 +1,8 @@
 /*Cards @dashboard.html*/
 
+* {
+  font-family: 'Basic', sans-serif;
+}
 .flex{
   display: flex;
   justify-content: center;
@@ -37,6 +40,16 @@
 
 .cards {
   width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#next_game {
+  border-radius: 20px;
+  height: 50px;
+  width: 150px;
+  font-size: 16px;
 }
 
 /*Black card*/
@@ -94,13 +107,40 @@
 #cardbox {
   display: flex;
   justify-content: center;
+  height: 300px;
 }
 
 #master {
   margin: 0px;
 }
 
-/* the hand */
+.notify {
+  background-color: #e73c7e;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  padding: 30px;
+  border-radius: 400px;
+  height: 600px;
+  width: 600px;
+  border: 3px solid white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+iframe {
+  border-radius: 250px;
+  margin-top: 50px;
+}
+
+/* .notify h2{
+} */
+
+/* The hand */
 .hand {
   position: absolute;
   margin: 0% 5% 0% 20%;
@@ -176,9 +216,6 @@
     #732982 83.25%,
     #732982 100%,
     #E7484F 100%
-    
-    
-    
   );
   animation:slidebg 2s linear infinite;
 }
@@ -222,6 +259,3 @@
   box-shadow: -8px 8px #181718;
   transition: .3s;
 }
-
-/* Fix absolute position on white cards.
-Anchor to bottom of browser. */

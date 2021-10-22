@@ -160,7 +160,7 @@ export const Cah =
         "pack": 1
       },
       {
-        "text": "Flynn's insatiable bloodlust.",
+        "text": "Flynn's room of cadavers.",
         "pack": 1
       },
       {
@@ -285,6 +285,18 @@ export const Cah =
       },
       {
         "text": "Chewbacca's dingleberries.",
+        "pack": 2
+      },
+      {
+        "text": "Getting splinters on your bum from riding a Nimbus 3000.",
+        "pack": 2
+      },
+      {
+        "text": "A GIANT FREAKIN' DEATH FRAY!!!",
+        "pack": 2
+      },
+      {
+        "text": "Thor, the God of thunder and love.",
         "pack": 2
       },
       {
