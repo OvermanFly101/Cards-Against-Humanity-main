@@ -102,6 +102,9 @@ var count = 0;
 var restart_button = document.getElementById('next_game');
 restart_button.addEventListener('click', restart);
 function restart(){
+    // this doesn't disappear
+    document.getElementById('pop-it').notify.style.display = 'none';
+
     //PROBLEM CHILD: deletes whole <tr>
     var display_row = document.getElementById('display_row'); // Problem child!
     display_row.remove();
