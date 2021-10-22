@@ -90,9 +90,9 @@ function choose(e){
     console.log(chosen);
     var alert_user = document.getElementById('pop-it');
     if(chosen == the_user[0]){
-        alert_user.innerHTML= '<div class="notify"><iframe src="https://giphy.com/embed/7b4FwtEI6W9yg" width="480" height="366" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><h2>I guess you won this round.</h2></div>';
+        alert_user.innerHTML += `<div id='poop' class="notify"><iframe src="https://giphy.com/embed/7b4FwtEI6W9yg" width="480" height="366" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><h2>I guess you won this round.</h2></div>`;
     } else{
-        alert_user.innerHTML= `<div class="notify" style='text-align: center;'><h2 style='width:400px;'>Wow you think the computer is funnier? I respect the honesty. You deserve an Oscar.</h2><iframe src="https://giphy.com/embed/jU9m03NG7bw88rwzok" width="480" height="400" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>`;
+        alert_user.innerHTML += `<div id='poop' class="notify" style='text-align: center;'><h2 style='width:400px;'>Wow you think the computer is funnier? I respect the honesty. You deserve an Oscar.</h2><iframe src="https://giphy.com/embed/jU9m03NG7bw88rwzok" width="480" height="400" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>`;
     }
 }
 
@@ -106,13 +106,15 @@ function restart(){
         alert_user.innerHTML= '<div class="notify"><h2>Would You like to continue?</h2></div>';
         count = 0;
     }
-    
-    var alert_user = document.getElementById('pop-it');
-    if(chosen == the_user[0]){
-        alert_user.innerHTML= `<div class="notify" style='display: none;'><iframe src="https://giphy.com/embed/7b4FwtEI6W9yg" width="480" height="366" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><h2>I guess you won this round.</h2></div>`;
-    } else{
-        alert_user.innerHTML= `<div class="notify" style='display: none;'><h2 style='width:400px;'>Wow you think the computer is funnier? I respect the honesty. You deserve an Oscar.</h2><iframe src="https://giphy.com/embed/jU9m03NG7bw88rwzok" width="480" height="400" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>`;
-    }
+    //gets rid of everything and game goes no further
+    document.getElementById('poop').remove();
+
+    // let element = document.getElementById("pop_it");
+    // while (element.lastChild) {
+    //     element.removeChild(element.lastChild);
+    // }
+
+
 
     //PROBLEM CHILD: deletes whole <tr>
     var display_row = document.getElementById('display_row'); // Problem child!
